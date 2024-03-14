@@ -1,0 +1,8 @@
+helloworld.py
+setup.py
+pyb_demo.egg-info/PKG-INFO
+pyb_demo.egg-info/SOURCES.txt
+pyb_demo.egg-info/dependency_links.txt
+pyb_demo.egg-info/namespace_packages.txt
+pyb_demo.egg-info/top_level.txt
+pyb_demo.egg-info/zip-safe

@@ -1,0 +1,33 @@
+running clean
+'build/lib' does not exist -- can't clean it
+'build/bdist.macosx-10.9-x86_64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+running sdist
+running egg_info
+creating pyb_demo.egg-info
+writing pyb_demo.egg-info/PKG-INFO
+writing dependency_links to pyb_demo.egg-info/dependency_links.txt
+writing namespace_packages to pyb_demo.egg-info/namespace_packages.txt
+writing top-level names to pyb_demo.egg-info/top_level.txt
+writing manifest file 'pyb_demo.egg-info/SOURCES.txt'
+reading manifest file 'pyb_demo.egg-info/SOURCES.txt'
+writing manifest file 'pyb_demo.egg-info/SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating pyb-demo-1.0.dev0
+creating pyb-demo-1.0.dev0/pyb_demo.egg-info
+copying files to pyb-demo-1.0.dev0...
+copying helloworld.py -> pyb-demo-1.0.dev0
+copying setup.py -> pyb-demo-1.0.dev0
+copying pyb_demo.egg-info/PKG-INFO -> pyb-demo-1.0.dev0/pyb_demo.egg-info
+copying pyb_demo.egg-info/SOURCES.txt -> pyb-demo-1.0.dev0/pyb_demo.egg-info
+copying pyb_demo.egg-info/dependency_links.txt -> pyb-demo-1.0.dev0/pyb_demo.egg-info
+copying pyb_demo.egg-info/namespace_packages.txt -> pyb-demo-1.0.dev0/pyb_demo.egg-info
+copying pyb_demo.egg-info/top_level.txt -> pyb-demo-1.0.dev0/pyb_demo.egg-info
+copying pyb_demo.egg-info/zip-safe -> pyb-demo-1.0.dev0/pyb_demo.egg-info
+copying pyb_demo.egg-info/SOURCES.txt -> pyb-demo-1.0.dev0/pyb_demo.egg-info
+Writing pyb-demo-1.0.dev0/setup.cfg
+creating dist
+Creating tar archive
+removing 'pyb-demo-1.0.dev0' (and everything under it)
