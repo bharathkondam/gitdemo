@@ -1,0 +1,17 @@
+###
+### Prefect deployment for scheduled ML pipeline executions
+###
+
+name: ml-pipeline/interval-run
+description: Retrain and evaluate churn models every two minutes after data refresh.
+flow_name: ml-pipeline
+entrypoint: src/ml_pipeline/flow.py:build_ml_pipeline_flow
+parameters: {}
+work_pool:
+  name: default-agent-pool
+  work_queue_name: default
+  job_variables: {}
+schedule:
+  cron: "*/2 * * * *"
+  timezone: UTC
+

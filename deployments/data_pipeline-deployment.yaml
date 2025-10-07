@@ -1,0 +1,17 @@
+###
+### Prefect deployment for scheduled data pipeline executions
+###
+
+name: data-pipeline/interval-run
+description: Refresh processed datasets and EDA artifacts every two minutes.
+flow_name: data-pipeline
+entrypoint: src/data_pipeline/flow.py:build_data_pipeline_flow
+parameters: {}
+work_pool:
+  name: default-agent-pool
+  work_queue_name: default
+  job_variables: {}
+schedule:
+  cron: "*/2 * * * *"
+  timezone: UTC
+

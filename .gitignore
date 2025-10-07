@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Data & artifacts
+data/raw/*
+data/interim/*
+data/processed/*
+logs/*
+reports/*
+artifacts/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!logs/.gitkeep
+!reports/.gitkeep
+!artifacts/.gitkeep
+
+# Prefect
+.prefect/
+
