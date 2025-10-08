@@ -29,3 +29,5 @@ deployments:
       - prefect.deployments.steps.git_clone.git_clone:
           repository: git@github.com:bharathkondam/gitdemo.git
           branch: main
+          credentials:
+            prefect.blocks.secret: githubcreds
