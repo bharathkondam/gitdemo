@@ -74,6 +74,8 @@ All code resides in the repository `~/Projects/ApiDriven`. Prefect deployments a
   - `GET /api/metrics` – latest model metrics.
   - `GET /api/model-runs` – history of model runs.
   - `GET /api/artifacts` – lists available figures and model files.
+- **Swagger documentation** is automatically available at `http://localhost:8000/docs` when running `uvicorn src.api.main:app --reload`.
+- Use the Swagger UI to exercise the API interactively or generate client code.
 
 ### 5.2 Streamlit (`dashboard/app.py`)
 - Displays pipeline logs, recent metadata, latest metrics, EDA figures, and model history.
@@ -135,4 +137,3 @@ pytest
 - If using Prefect Cloud, run `prefect cloud login` and reapply deployments.
 - Include `docs/assignment_report.md` with the submission to outline deliverables.
 - Provide screenshots (optional) of the dashboard and Prefect UI showing flow runs.
-
