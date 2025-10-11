@@ -29,5 +29,13 @@ deployments:
       - prefect.deployments.steps.git_clone.git_clone:
           repository: git@github.com:bharathkondam/gitdemo.git
           branch: main
+  - name: git-prefect-sample/manual
+    entrypoint: src/workflows/sample_prefect_flow.py:git_prefect_sample
+    pool: default-agent-pool
+    schedule: null
+    pull:
+      - prefect.deployments.steps.git_clone.git_clone:
+          repository: "https://github.com/bharathkondam/gitdemo.git"
+          branch: main
           credentials:
             prefect.blocks.secret: githubcreds
