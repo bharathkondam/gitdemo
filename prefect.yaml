@@ -1,41 +1,19 @@
 name: churn-analytics-platform
 
+prefect-version: "3.4.0"
+
 deployments:
-  - name: data-pipeline/interval-run
-    entrypoint: src/data_pipeline/flow.py:build_data_pipeline_flow
-    pool: default-agent-pool
+  - name: data-pipeline/interval
+    entrypoint: flows/data_pipeline_flow.py:data_pipeline_flow
+    work_pool:
+      name: default-agent-pool
     schedule:
       cron: "*/2 * * * *"
       timezone: UTC
-    pull:
-      - prefect.deployments.steps.git_clone.git_clone:
-          repository: git@github.com:bharathkondam/gitdemo.git
-          branch: main
-  - name: ml-pipeline/interval-run
-    entrypoint: src/ml_pipeline/flow.py:build_ml_pipeline_flow
-    pool: default-agent-pool
+  - name: ml-pipeline/interval
+    entrypoint: flows/ml_pipeline_flow.py:ml_pipeline_flow
+    work_pool:
+      name: default-agent-pool
     schedule:
       cron: "*/2 * * * *"
       timezone: UTC
-    pull:
-      - prefect.deployments.steps.git_clone.git_clone:
-          repository: git@github.com:bharathkondam/gitdemo.git
-          branch: main
-  - name: simple-flow/manual
-    entrypoint: src/simple_flow.py:hello_flow
-    pool: default-agent-pool
-    schedule: null
-    pull:
-      - prefect.deployments.steps.git_clone.git_clone:
-          repository: git@github.com:bharathkondam/gitdemo.git
-          branch: main
-  - name: git-prefect-sample/manual
-    entrypoint: src/workflows/sample_prefect_flow.py:git_prefect_sample
-    pool: default-agent-pool
-    schedule: null
-    pull:
-      - prefect.deployments.steps.git_clone.git_clone:
-          repository: "https://github.com/bharathkondam/gitdemo.git"
-          branch: main
-          credentials:
-            prefect.blocks.secret: githubcreds
